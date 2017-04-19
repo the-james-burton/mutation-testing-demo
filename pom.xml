@@ -1,12 +1,37 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jimsey.demo</groupId>
   <artifactId>mutation-testing-demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>mutation-testing-demo</name>
   <description>mutation-testing-demo</description>
-  
-    <properties>
+
+  <developers>
+    <developer>
+      <name>James Burton</name>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <system>GitHub</system>
+    <url>https://github.com/the-james-burton/mutation-testing-demo/issues</url>
+  </issueManagement>
+
+  <ciManagement>
+    <url>https://travis-ci.org/the-james-burton/mutation-testing-demo</url>
+  </ciManagement>
+
+  <scm>
+    <connection>scm:git:git://github.com/the-james-burton/mutation-testing-demo.git</connection>
+    <developerConnection>scm:git:git@github.com:the-james-burton/mutation-testing-demo.git</developerConnection>
+    <url>https://github.com/the-james-burton/mutation-testing-demo</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <properties>
     <!-- maven... -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -108,5 +133,5 @@
     </dependency>
 
   </dependencies>
-  
+
 </project>
