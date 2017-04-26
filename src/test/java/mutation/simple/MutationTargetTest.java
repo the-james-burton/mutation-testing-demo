@@ -4,8 +4,11 @@ import static org.assertj.core.api.Assertions.*;
 
 import org.junit.Test;
 
-import mutation.simple.MutationTarget;
-
+/**
+ * Performs a minimum set of assertions to kill all mutations.
+ * Try commenting out some assertions to see what survives.
+ * @author the-james-burton
+ */
 public class MutationTargetTest {
 
   private MutationTarget target = new MutationTarget();

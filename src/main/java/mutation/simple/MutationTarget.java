@@ -1,5 +1,11 @@
 package mutation.simple;
 
+/**
+ * A very simple class designed to exercise the various PIT mutations...
+ * http://pitest.org/quickstart/mutators/
+ *
+ * @author the-james-burton
+ */
 public class MutationTarget {
 
   public boolean lessThan(int foo, int bar) {

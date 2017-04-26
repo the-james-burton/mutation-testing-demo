@@ -29,7 +29,10 @@ import static org.junit.Assert.*;
 import java.io.IOException;
 import java.lang.invoke.MethodHandles;
 
+import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.TestName;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,11 +40,23 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javaslang.collection.CharSeq;
 
+/**
+ * This is a higher quality test designed to do near-full coverage with a good range of assertions
+ * @author the-james-burton
+ */
 public class TickerTest {
 
   private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
   private final ObjectMapper json = new ObjectMapper();
+
+  @Rule
+  public TestName name = new TestName();
+
+  @Before
+  public void before() {
+    logger.info("start:{}", name.getMethodName());
+  }
 
   @Test
   public void testExchangeCompareTo() {

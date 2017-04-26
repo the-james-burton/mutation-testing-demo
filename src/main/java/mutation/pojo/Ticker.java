@@ -41,6 +41,11 @@ import javaslang.Tuple2;
 import javaslang.collection.CharSeq;
 import javaslang.control.Try;
 
+/**
+ * This is a slightly simplified version of my Ticker object used in the-turbine project
+ * It has robust Object methods that are easy to test
+ * @author the-james-burton
+ */
 @JsonAutoDetect(
     fieldVisibility = Visibility.NONE,
     getterVisibility = Visibility.NONE,

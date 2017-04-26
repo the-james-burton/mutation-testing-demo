@@ -37,20 +37,21 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-
 import javaslang.Tuple;
 import javaslang.collection.CharSeq;
 import javaslang.control.Try;
 
+/**
+ * This test is deliberately designed to perform near-full coverage on the Ticker object, but make no assertions.
+ * @author the-james-burton
+ */
 public class TickerLowQualityTest {
 
   private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-  private final ObjectMapper json = new ObjectMapper();
-
   @Test
   public void testFullCoverageNoAssertions() throws Exception {
+
     // cover the constructors...
     String timestamp = OffsetDateTime.now().toString();
     Ticker ticker = Ticker.of(CharSeq.of("ABC.L"), ExchangeEnum.LSE, CharSeq.of("test name"));
@@ -70,11 +71,11 @@ public class TickerLowQualityTest {
     logger.info(format("properties:%s", results));
 
     // cover the object properties...
-    logger.info(ticker.toString());
-    ticker.equals(null);
-    ticker.equals(ticker);
-    ticker.hashCode();
-    ticker.compareTo(ticker2);
+    logger.info(format("toString:%s", ticker.toString()));
+    logger.info(format("equals:%s", ticker.equals(null)));
+    logger.info(format("equals:%s", ticker.equals(ticker)));
+    logger.info(format("hashCode:%s", ticker.hashCode()));
+    logger.info(format("compareTo:%s", ticker.compareTo(ticker2)));
 
   }
 
